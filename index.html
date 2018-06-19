@@ -38,14 +38,130 @@
     -->
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
 
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="css/index.css" /> -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <icon src="img/logo.png" />
+    <style type="text/css">
+        body{
+             background-color:#f2f2f2;
+        }   
+    </style>
     <title>Hello World</title>
 </head>
 
 <body>
-    <div class="app">
-        <h1>PhoneGap</h1>
+    <div>
+        <div class="row" id="steppanel">
+                <h6>&nbsp;</h6>
+                <div class="col-md-4"></div>
+                    <div class="col-md-4 col-xs-12">
+                      <div class="process">
+                       <div class="process-row nav nav-tabs">
+                        <div class="process-step" title="Company Set Up">
+                         <button type="button" class="btn btn-default btn-circle" style=" border-radius: 50%;"><i class="fa fa-newspaper-o"></i></button>
+                         <p><small>Step 1</small></p>
+                        </div>
+                        <div class="process-step" title="Company Employees Profile">
+                         <button type="button" class="btn btn-default btn-circle" style=" border-radius: 50%;"><i class="fa fa-users "></i></button>
+                         <p><small>Step 2</small></p>
+                        </div>
+                        <div class="process-step" title="Company Organization Chart & Hierarchy">
+                         <button type="button" class="btn btn-default btn-circle" style=" border-radius: 50%;"><i class="fa fa-sitemap"></i></button>
+                         <p><small>Step 3</small></p>
+                        </div>
+                        <div class="process-step" title="Company Profit / Loss">
+                         <button type="button" class="btn btn-default btn-circle" style=" border-radius: 50%;"><i class="fa fa-tachometer"></i></button>
+                         <p><small>Step 4</small></p>
+                        </div>
+                        <div class="process-step" title="Financial Year Set Up">
+                         <button type="button" class="btn btn-default btn-circle" style=" border-radius: 50%;"><i class="fa fa-calendar "></i></button>
+                         <p><small>Step 5</small></p>
+                        </div>
+                        <div class="process-step" title="Simulate Calculation of BEP">
+                         <button type="button" class="btn btn-info btn-circle" style=" border-radius: 50%;"><i class="fa fa-bar-chart "></i></button>
+                         <p><small>Step 6</small></p>
+                        </div>
+                       </div>
+                      </div>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+            <div class="row">
+                <div>
+
+                    <div class="col-xs-12 col-md-12 pull-left" style="text-align: center"><h3> Simulate Company Break Even Point</h3><hr></div>
+                    
+                    <div class="col-xs-12 col-md-12" >
+
+
+                        <div class="form-group">
+                            <label class="col-xs-12 col-md-5 control-label al">Product Categories / Profit Centre ( MYR / Year )</label>
+                            <div class="col-xs-12 col-md-7">
+                                <input type="number" class="form-control" id="yearly_profit" name="yearly_profit" style="margin-bottom: 4px" placeholder="MYR per Year" value="">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-xs-12 col-md-5 control-label al">Product Categories / Profit Centre ( MYR / Month )</label>
+                            <div class="col-xs-12 col-md-7">
+                                <input type="number" class="form-control" id="monthly_profit" name="monthly_profit" style="margin-bottom: 4px" placeholder="MYR per Month" value="">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="col-xs-12 col-md-5 control-label al">Branch / Team ( MYR / Year )</label>
+                            <div class="col-xs-12 col-md-7">
+                                <input type="number" class="form-control" id="yearly_branch_revenue" name="yearly_branch_revenue" style="margin-bottom: 4px" placeholder="MYR per Year" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-xs-12 col-md-5 control-label al">Branch / Team ( MYR / Month )</label>
+                            <div class="col-xs-12 col-md-7">
+                                <input type="number" class="form-control" id="monthly_branch_revenue" name="monthly_branch_revenue" style="margin-bottom: 4px" placeholder="MYR per Month" value="">
+                            </div>
+                        </div>  
+                        <div class="form-group">
+                            <label class="col-xs-12 col-md-5 control-label al">Branch / Team</label>
+                            <div class="col-xs-12 col-md-7">
+                                <input type="number" class="form-control" id="total_branch" name="total_branch" style="margin-bottom: 4px" placeholder="Total branch/team" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-xs-12 col-md-5 control-label al">Branch Total Salary ( MYR / Month )</label>
+                            <div class="col-xs-12 col-md-7">
+                                <input type="number" class="form-control" id="total_basic_salary" name="total_basic_salary" style="margin-bottom: 4px" placeholder="MYR per Month" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-xs-12 col-md-5 control-label al">Branch Operation Cost ( MYR / Month )</label>
+                            <div class="col-xs-12 col-md-7">
+                                <input type="number" class="form-control" id="total_operation_cost" name="total_operation_cost" style="margin-bottom: 4px" placeholder="MYR per Month" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <h2>&nbsp;</h2>
+                    <div class="row col-xs-12 col-md-12 hidden" id="termpanel">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div style="font-size: 13px"><input id="term1" name="term1"  type="checkbox">&nbsp;&nbsp;Check here to indicate that you have accept the <a onclick="termcondition()"><strong>Super Business System Software Disclaimer</strong></a>.</div>
+                            &nbsp;
+                            </div>
+                        <div class="col-md-2"></div>
+                    </div>
+
+                        <div class="row" id="nextstep">
+                            <div class="col-xs-12" style="text-align: center;">
+                                <button type="button" class="btn btn-info" id="simulate-btn" style="margin-left: 130px" onclick="alert('1')">SIMULATE RESULT</button>
+                            </div>
+                        </div>
+                        <h2>&nbsp;</h2>
+
+                </div>
+            </div>
     </div>
+    <script type="text/javascript" src="bootstrap.min.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
@@ -54,3 +170,6 @@
 </body>
 
 </html>
+<script type="text/javascript">
+
+</script>
